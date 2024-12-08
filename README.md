@@ -22,14 +22,15 @@ Data Analysis	- Powered by Hadoop for processing large datasets, providing insig
 2.1 Main Objective: To enables patients to search for and locate required medications efficiently while empowering pharmacies to manage inventory and
      predict demand trends effectively through machine learning and cloud.
 
-Specific Objectives	Description
+Specific Objectives	
+
 Patient Portal	- To provide secure login for patients.
 	- To allow searching and locating prescribed medications in registered pharmacies.
 	- To display availability, pricing, and pharmacy details.
 Pharmacy Portal	-To enable pharmacies to register and manage inventory
 
 3.Technical Implementation
-Aspect	Details
+
 Backend	Developed with Django for secure and modular backend architecture.
 Frontend	Interactive and responsive interfaces built with AJAX, HTML5, and CSS3.
 Database Management	Utilizes Amazon RDS for scalable, reliable, and high-availability relational data storage.
@@ -37,9 +38,9 @@ Real-Time Streaming	Apache Kafka manages live data updates for inventory and dem
 Big Data Analysis	Hadoop analyzes extensive pharmacy and patient data to uncover patterns and forecast trends.
 Analytics and Reporting	Dashboards using machine learning models provide visual insights into pharmacy performance.
 
-4. How the project executed
-4.1 Set Up the Project Environment
-4.1.1 Installed Tools and Frameworks:
+
+4. Installed Tools and Frameworks:
+   
 Python: 
 Alread installed on the computer
 
@@ -101,13 +102,22 @@ Followed this link: https://www.youtube.com/watch?v=HGOrsBzQrq0
     static/
         css/
         js/
+
+ 
 5. Challenges and Solutions
-Challenge	Description	Solution
+
+
+
+
 Data Synchronization	Ensuring real-time inventory updates across multiple pharmacies.	Implemented Apache Kafka and WebSocket protocols for instant syncing.
 Scalability	Handling surges in traffic during public health crises.	Leveraged elastic scaling and cloud load balancing solutions.
 User Interface	Designing an intuitive platform for users with varying technical expertise.	Used AJAX for dynamic updates and responsive design principles.
 Demand Forecasting	Predicting shortages or overstock based on fluctuating demand.	Implemented machine learning models (regression, LSTM) for accurate forecasting.
-6. Future Out looks
+
+
+
+
+6 Future Out looks
 Based on the current technological advancement and data analytics, the following have to be considered to improve the system:
 -Uploading medical diagnostic reports and extract them using optical character recognition (OCR),
 -Allowing the patients to order medicines online,
