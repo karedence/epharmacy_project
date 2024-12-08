@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Dashboard Analytics</h2>
+
+<div>
+    <h4>Total Medicines: {{ total_medicines }}</h4>
+    <h4>Total Searches: {{ total_searches }}</h4>
+</div>
+
+<div>
+    <h3>Search Trend</h3>
+    <img src="data:image/png;base64,{{ search_trend_chart }}" alt="Search Trend Chart">
+</div>
+
+<div>
+    <h3>Predictions for Future Orders</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Medicine</th>
+                <th>Future Date</th>
+                <th>Predicted Orders</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medicine, prediction_list in predictions.items %}
+                {% for future_day, predicted_count in prediction_list %}
+                <tr>
+                    <td>{{ medicine }}</td>
+                    <td>{{ future_day|date:"Y-m-d" }}</td>
+                    <td>{{ predicted_count|floatformat:2 }}</td>
+                </tr>
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

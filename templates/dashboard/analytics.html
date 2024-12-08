@@ -1,0 +1,28 @@
+<h2>Medicine Search Trends</h2>
+<table>
+    <tr>
+        <th>Medicine</th>
+        <th>Search Count</th>
+    </tr>
+    {% for trend in trends %}
+    <tr>
+        <td>{{ trend.0 }}</td>
+        <td>{{ trend.1 }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<h2>Real-Time Search Updates</h2>
+<div id="real-time-updates"></div>
+
+<script>
+    setInterval(function() {
+        fetch('/dashboard/real_time_updates/')
+            .then(response => response.json())
+            .then(data => {
+                const updatesDiv = document.getElementById("real-time-updates");
+                updatesDiv.innerHTML = data.updates.map(update => `<p>${update}</p>`).join('');
+            });
+    }, 5000);  // Fetch updates every 5 seconds
+</script>
